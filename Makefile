@@ -22,5 +22,3 @@ test: hex2ascii
 
 clean:
 	-rm hex2ascii 2>/dev/null;
-
-# makefile function to check tests
