@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 #include <stdlib.h>
 
 int strsize(char * str) {
@@ -10,7 +9,7 @@ int strsize(char * str) {
 
 int main(int argc, char ** argv) {
   if (2 > argc) {
-    printf("Usage : ./decrypt <ascii string>");
+    printf("Usage : ./hex2ascii <ascii string>");
     return 0;
   }
 
@@ -21,12 +20,7 @@ int main(int argc, char ** argv) {
     return -1;
   }
 
-  int i = -1;
-
-  char c1, c2;
-
-  int j = 1;
-
+  int i = -1, j = 1, c1, c2;
   char * str = malloc(1);
 
   for (; s > ++i;) {
@@ -44,11 +38,7 @@ int main(int argc, char ** argv) {
 
   str[j] = 0;
 
-  for (i = -1;
-    (s / 2 + 1) > ++i;) {
-    printf("%c", str[i]);
-  }
-
+  for (i = -1; (s / 2 + 1) > ++i;) printf("%c", str[i]);
   printf("\n");
 
   return 0;
